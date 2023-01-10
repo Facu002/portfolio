@@ -37,7 +37,6 @@ body{
     .banner-container{
         height: 100vh;
         .banner-container__wrapper {
-            background-color: rgba(245, 245, 220, 0.548);
             background-color: var(--sand);
             height: 60vh;
             width: 50vw;
@@ -104,6 +103,7 @@ body{
             justify-content: center;
             align-items: center;
             width: 80vw;
+            min-width: 700px;
             background-color: beige;
             margin: 0 auto;
             outline: 1px solid;
@@ -137,14 +137,12 @@ body{
                 align-items: center;
                 justify-content: center;
                 .profile-container{
-                    border: 1px solid red;
                     width: fit-content;
                     position: absolute;
                     top: -10%;
                     left: 0%;
                     opacity: 0.2;
                     .profile-img{
-                        border: 1px solid red;
                         width: 200px;
                         border-radius: 30px;
                     }
@@ -268,6 +266,219 @@ body{
                         transition: all 0.3s;
                         &:hover, &:active{
                             color: var(--dark-wood);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:850px) {
+    body{
+        .banner-container{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            border: 2px solid red;
+            .banner-container__wrapper{
+                width: 70vw;
+            }
+        }
+        .aboutMe-container{
+            .aboutMe-container__title{
+                font-size: 2rem;
+            }
+            &__wrapper{
+                width: 90vw;
+                flex-direction: column;
+                .personalInfo-box{
+                    width: 90%;
+                    border: 3px solid red;
+                }
+                .skills-box{
+                    height: auto;
+                    margin: 1rem;
+                    .technology-container{
+                        span{
+                            font-size: 1.5rem;
+                        }
+                    }
+                    .courses-box{
+                        border: 3px solid red;
+                        // display: flex;
+                        // flex-direction: column;
+                        .certificate-container{
+                            img{
+                                width: 200px;
+                            }
+                            span{
+                                font-size: 1rem;
+                            }
+                            // &:last-child{
+                            //     transform: translateX(0);
+                            // }
+                        }
+                    }
+
+                }
+                .languages-box{
+                    border: 3px solid red;
+
+                }
+            }
+        }
+        .projects-container{
+            .projects-container__title{
+                font-size: 2rem;
+            }
+            &__wrapper{
+                .projectPreview-container{
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    border: 1px solid red;
+                }
+            }
+        }
+    }
+}
+@media (max-width:750px) {
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        .banner-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid red;
+            .banner-container__wrapper{
+                width: 70vw;
+            }
+        }
+        .aboutMe-container{
+            height: auto;
+            border: 2px solid rgb(6, 144, 66);
+
+            .aboutMe-container__title{
+                font-size: 2rem;
+            }
+            &__wrapper{
+                width: 100vw;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-width: auto;
+                .personalInfo-box{
+                    width: 80%;
+                }
+                .skills-box{
+                    height: auto;
+                    margin: 1rem;
+                    width: 90%;
+                    .technology-container{
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 10px;
+                        width: auto;
+                        flex-direction: column;
+                        span{
+                            // margin: 10px;
+                            width: auto;
+                            padding: 5px;
+                            font-size: 1.5rem;
+                            &:nth-child(4){
+                                transform: translateX(calc(25% + 20px));
+                            }
+                            &:nth-child(5){
+                                transform: translateX(calc(25% + 20px));
+                            }
+                        }
+                    }
+                    .courses-box{
+                        display: flex;
+                        flex-direction: column;
+                        .certificate-container{
+                            img{
+                                width: 200px;
+                            }
+                            span{
+                                font-size: 1rem;
+                            }
+                            &:last-child{
+                                transform: translateX(0);
+                            }
+                        }
+                    }
+
+                }
+                .languages-box{
+                    border: 3px solid red;
+
+                }
+            }
+        }
+        .projects-container{
+            border: 2px solid rgb(174, 0, 255);
+            
+            .projects-container__title{
+                font-size: 2rem;
+            }
+            &__wrapper{
+                width: 100%;
+                .projectPreview-container{
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    .project-thumbnail{
+                        width: 200px;
+                        border-radius: 5px;
+                        box-shadow: 0 0 1px 1px rgb(40, 40, 40);
+                    }
+                    .project-info{
+                        width: 90%;
+                        height: 100%;
+                        padding: 0.5rem 0;
+                        border-bottom: 1px solid var(--dark-wood);
+                        
+                        &__projectName{
+                            font-size: 1.5rem;
+                        }
+                        div{
+                            display: flex;
+                            width: auto;
+                            flex-wrap: nowrap;
+                            flex-shrink: 1;
+                            span{
+                                cursor: default;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: space-between;
+                                background-color: #59a985;
+                                margin-right: 10px;
+                                padding: 2px 10px;
+                            }
+                        }
+                        .project-description{
+                            margin: 1rem 0;
+                            font-size: 0.9rem;
+                        }
+                    }
+                    .project-view{
+                        a{ 
+                            font-size: 1.2rem;
+                            font-weight: 500;
+                            margin-right:1rem;
+                            color: var(--dark-green);
+                            text-decoration: none;
+                            transition: all 0.3s;
+                            &:hover, &:active{
+                                color: var(--dark-wood);
+                            }
                         }
                     }
                 }

@@ -38,7 +38,7 @@ function Projects() {
                         <span className='project-info__projectName'>Landing IWatch SE</span>
                         <div>
                             <span>React</span>
-                            <span>Javascript</span>
+                            <span>JavaScript</span>
                             <span>SCSS</span>
                         </div>
 
