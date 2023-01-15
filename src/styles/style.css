@@ -34,7 +34,6 @@ body {
   box-sizing: border-box;
   height: auto;
   width: 100%;
-  background-color: rgb(255, 208, 0);
   background-color: var(--dark-green);
   background: linear-gradient(108deg, var(--dark-green), #59a985);
   background-size: 120% 120%;
@@ -188,6 +187,7 @@ body .aboutMe-container__wrapper .skills-box .courses-box .certificate-container
 }
 body .aboutMe-container__wrapper .skills-box .courses-box .certificate-container img {
   width: 150px;
+  cursor: pointer;
 }
 body .aboutMe-container__wrapper .skills-box .courses-box .certificate-container span {
   font-size: 0.5rem;
@@ -202,6 +202,28 @@ body .aboutMe-container__wrapper .languages-box {
 }
 body .aboutMe-container__wrapper .languages-box span {
   background-color: #59a985;
+}
+body .modal {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease-out;
+}
+body .modal img {
+  width: 50vw;
+}
+body .modal.open {
+  opacity: 1;
+  pointer-events: all;
+  transition: all 0.25s ease-in;
 }
 body .projects-container {
   width: 100%;
@@ -284,7 +306,6 @@ body .projects-container__wrapper .projectPreview-container .project-view a:hove
     display: flex;
     justify-content: left;
     align-items: center;
-    border: 2px solid red;
   }
   body .banner-container .banner-container__wrapper {
     width: 70vw;
@@ -298,7 +319,6 @@ body .projects-container__wrapper .projectPreview-container .project-view a:hove
   }
   body .aboutMe-container__wrapper .personalInfo-box {
     width: 90%;
-    border: 3px solid red;
   }
   body .aboutMe-container__wrapper .skills-box {
     height: auto;
@@ -307,17 +327,15 @@ body .projects-container__wrapper .projectPreview-container .project-view a:hove
   body .aboutMe-container__wrapper .skills-box .technology-container span {
     font-size: 1.5rem;
   }
-  body .aboutMe-container__wrapper .skills-box .courses-box {
-    border: 3px solid red;
-  }
   body .aboutMe-container__wrapper .skills-box .courses-box .certificate-container img {
     width: 200px;
   }
   body .aboutMe-container__wrapper .skills-box .courses-box .certificate-container span {
     font-size: 1rem;
   }
-  body .aboutMe-container__wrapper .languages-box {
-    border: 3px solid red;
+  body .modal img {
+    width: 70vw;
+    min-width: 400px;
   }
   body .projects-container .projects-container__title {
     font-size: 2rem;
@@ -326,7 +344,6 @@ body .projects-container__wrapper .projectPreview-container .project-view a:hove
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    border: 1px solid red;
   }
 }
 @media (max-width: 750px) {
@@ -341,14 +358,12 @@ body .projects-container__wrapper .projectPreview-container .project-view a:hove
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
   }
   body .banner-container .banner-container__wrapper {
     width: 70vw;
   }
   body .aboutMe-container {
     height: auto;
-    border: 2px solid rgb(6, 144, 66);
   }
   body .aboutMe-container .aboutMe-container__title {
     font-size: 2rem;
@@ -399,11 +414,9 @@ body .projects-container__wrapper .projectPreview-container .project-view a:hove
   body .aboutMe-container__wrapper .skills-box .courses-box .certificate-container:last-child {
     transform: translateX(0);
   }
-  body .aboutMe-container__wrapper .languages-box {
-    border: 3px solid red;
-  }
-  body .projects-container {
-    border: 2px solid rgb(174, 0, 255);
+  body .modal img {
+    width: 90vw;
+    min-width: 100px;
   }
   body .projects-container .projects-container__title {
     font-size: 2rem;

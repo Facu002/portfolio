@@ -47,8 +47,8 @@ function Projects() {
                         </div>
 
                         <div className="project-view">
-                            <a href='' target="_blank">Ver Demo</a>
-                            <a href='' target="_blank">Ver Código</a>
+                            <a href='https://iwatch-landing.vercel.app/' target="_blank">Ver Demo</a>
+                            <a href='https://github.com/Facu002/iwatch-landing' target="_blank">Ver Código</a>
                         </div>
                     </div>
                 </div>

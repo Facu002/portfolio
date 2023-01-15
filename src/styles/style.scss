@@ -24,11 +24,8 @@ body{
     box-sizing: border-box;
     height: auto;
     width: 100%;
-    background-color: rgb(255, 208, 0);
     background-color: var(--dark-green);
 
-    
-    
     background: linear-gradient(108deg,var(--dark-green),#59a985);
     background-size: 120% 120%;
     animation: gradient-animation 20s ease infinite;
@@ -173,6 +170,7 @@ body{
                         margin: 20px;
                         img{
                             width: 150px;
+                            cursor: pointer;
                         }
                         span{
                             font-size: 0.5rem;
@@ -193,6 +191,29 @@ body{
             }
         }
     }
+    .modal{
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        pointer-events: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.1s ease-out;
+        img{
+            width: 50vw;
+        }
+    }
+    .modal.open{
+        opacity: 1;
+        pointer-events: all;
+        transition: all 0.25s ease-in;
+    }
+
     .projects-container{
         width: 100%;
         height: 100%;
@@ -280,7 +301,6 @@ body{
             display: flex;
             justify-content: left;
             align-items: center;
-            border: 2px solid red;
             .banner-container__wrapper{
                 width: 70vw;
             }
@@ -294,7 +314,6 @@ body{
                 flex-direction: column;
                 .personalInfo-box{
                     width: 90%;
-                    border: 3px solid red;
                 }
                 .skills-box{
                     height: auto;
@@ -305,7 +324,6 @@ body{
                         }
                     }
                     .courses-box{
-                        border: 3px solid red;
                         // display: flex;
                         // flex-direction: column;
                         .certificate-container{
@@ -322,10 +340,12 @@ body{
                     }
 
                 }
-                .languages-box{
-                    border: 3px solid red;
-
-                }
+            }
+        }
+        .modal{
+            img{
+                width: 70vw;
+                min-width: 400px;
             }
         }
         .projects-container{
@@ -337,7 +357,6 @@ body{
                     flex-direction: column;
                     align-items: center;
                     justify-content: flex-start;
-                    border: 1px solid red;
                 }
             }
         }
@@ -354,14 +373,12 @@ body{
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 2px solid red;
             .banner-container__wrapper{
                 width: 70vw;
             }
         }
         .aboutMe-container{
             height: auto;
-            border: 2px solid rgb(6, 144, 66);
 
             .aboutMe-container__title{
                 font-size: 2rem;
@@ -415,14 +432,16 @@ body{
                     }
 
                 }
-                .languages-box{
-                    border: 3px solid red;
-
-                }
+                
+            }
+        }
+        .modal{
+            img{
+                width: 90vw;
+                min-width: 100px;
             }
         }
         .projects-container{
-            border: 2px solid rgb(174, 0, 255);
             
             .projects-container__title{
                 font-size: 2rem;
