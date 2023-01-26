@@ -12,7 +12,7 @@ function Projects() {
                     
                     <div className="project-info">
                         <span className='project-info__projectName'>E-commerce insipirado en Puma</span>
-                        <div>
+                        <div className='project-info__tech'>
                             <span>React</span>
                             <span>Javascript</span>
                             <span>SCSS</span>
@@ -25,7 +25,7 @@ function Projects() {
                         </div>
 
                         <div className="project-view">
-                            <a href='https://puma-react-6i35.vercel.app/' target="_blank">Ver Demo</a>
+                            <a href='https://puma-react-ecommerce.vercel.app' target="_blank">Ver Demo</a>
                             <a href='https://github.com/Facu002/PUMA---react' target="_blank">Ver Código</a>
                         </div>
                     </div>
@@ -36,7 +36,7 @@ function Projects() {
 
                     <div className="project-info">
                         <span className='project-info__projectName'>Landing IWatch SE</span>
-                        <div>
+                        <div  className='project-info__tech'>
                             <span>React</span>
                             <span>JavaScript</span>
                             <span>SCSS</span>
@@ -57,7 +57,7 @@ function Projects() {
 
                     <div className="project-info">
                         <span className='project-info__projectName'>Landing Gta V</span>
-                        <div>
+                        <div className='project-info__tech'>
                             <span>React</span>
                             <span>Javascript</span>
                             <span>SCSS</span>

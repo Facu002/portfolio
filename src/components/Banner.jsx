@@ -1,4 +1,9 @@
 import React from 'react'
+import shade from '../img/Sintítulo-2.png'
+
+import css from '../img/css.png'
+import js from '../img/js.png'
+import react from '../img/react.png'
 
 function Banner() {
     return (
@@ -39,7 +44,12 @@ function Banner() {
 
             </div>
             </div>
-            
+            {/* <img className='shade' src={shade} alt="bg" /> */}
+            <div className='banner-container__backgroundshade'>
+                <img className='js' src={js} alt="bg" />
+                <img className='react' src={react} alt="bg" />
+                <img className='css' src={css} alt="bg" />
+            </div>
         </div>
     )
 }
