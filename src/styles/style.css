@@ -7,17 +7,6 @@
   --orange: #D36B00;
   --orange-highlight: #fa922bb9;
 }
-@-webkit-keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
@@ -29,14 +18,6 @@
     background-position: 0% 50%;
   }
 }
-@-webkit-keyframes enter-animation-js {
-  0% {
-    transform: translateX(80%) rotate(30deg);
-  }
-  100% {
-    transform: translateX(-20%) rotate(10deg);
-  }
-}
 @keyframes enter-animation-js {
   0% {
     transform: translateX(80%) rotate(30deg);
@@ -45,28 +26,12 @@
     transform: translateX(-20%) rotate(10deg);
   }
 }
-@-webkit-keyframes enter-animation-react {
-  0% {
-    transform: translateX(80%) rotate(30deg);
-  }
-  100% {
-    transform: translateX(-80%) rotate(10deg);
-  }
-}
 @keyframes enter-animation-react {
   0% {
     transform: translateX(80%) rotate(30deg);
   }
   100% {
     transform: translateX(-80%) rotate(10deg);
-  }
-}
-@-webkit-keyframes enter-animation-css {
-  0% {
-    transform: translateX(80%) rotate(30deg);
-  }
-  100% {
-    transform: translateX(0%) rotate(10deg);
   }
 }
 @keyframes enter-animation-css {
@@ -88,8 +53,7 @@ body {
   overflow-x: hidden;
   background: linear-gradient(108deg, var(--dark-purple), var(--light-fuchsia));
   background-size: 120% 120%;
-  -webkit-animation: gradient-animation 20s ease infinite;
-          animation: gradient-animation 20s ease infinite;
+  animation: gradient-animation 20s ease infinite;
 }
 body .banner-container {
   height: 100vh;
@@ -113,7 +77,6 @@ body .banner-container .banner-container__wrapper > * {
   margin: 1rem 0;
 }
 body .banner-container .banner-container__wrapper .title-box {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -133,7 +96,6 @@ body .banner-container .banner-container__wrapper .title-box span {
   background: linear-gradient(to bottom, transparent 50%, var(--orange-highlight) 30%);
 }
 body .banner-container .banner-container__wrapper .contactMe-box {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
@@ -153,24 +115,21 @@ body .banner-container__backgroundshade {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 1;
+  z-index: -1;
   display: flex;
   flex-direction: column;
   width: 500px;
 }
 body .banner-container__backgroundshade .js {
-  -webkit-animation: enter-animation-js 1.5s ease-in-out;
-          animation: enter-animation-js 1.5s ease-in-out;
+  animation: enter-animation-js 1.5s ease-in-out;
   transform: translateX(-20%) rotate(10deg);
 }
 body .banner-container__backgroundshade .react {
-  -webkit-animation: enter-animation-react 1.2s ease-in-out;
-          animation: enter-animation-react 1.2s ease-in-out;
+  animation: enter-animation-react 1.2s ease-in-out;
   transform: translateX(-80%) rotate(10deg);
 }
 body .banner-container__backgroundshade .css {
-  -webkit-animation: enter-animation-css 1.5s ease-in-out;
-          animation: enter-animation-css 1.5s ease-in-out;
+  animation: enter-animation-css 1.5s ease-in-out;
   transform: translateX(0%) rotate(10deg);
 }
 body .aboutMe-container {
@@ -209,7 +168,6 @@ body .aboutMe-container__wrapper {
 }
 body .aboutMe-container__wrapper .personalInfo-box {
   width: 40%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin: 0 auto;
@@ -246,7 +204,6 @@ body .aboutMe-container__wrapper .skills-box {
   justify-content: center;
 }
 body .aboutMe-container__wrapper .skills-box .profile-container {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   position: absolute;
@@ -425,11 +382,11 @@ body .projects-container__wrapper .projectPreview-container .project-view a {
   text-decoration: none;
   transition: all 0.3s;
   font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
 }
 body .projects-container__wrapper .projectPreview-container .project-view a:hover, body .projects-container__wrapper .projectPreview-container .project-view a:active {
   color: var(--orange);
   font-size: 1.3rem;
-  font-weight: 600;
 }
 
 @media (max-width: 850px) {
@@ -561,7 +518,6 @@ body .projects-container__wrapper .projectPreview-container .project-view a:hove
   }
   body .aboutMe-container__wrapper .skills-box .languages-box span {
     margin: 5px;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     font-size: 1rem;
