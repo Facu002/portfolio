@@ -2,6 +2,7 @@ import React from 'react'
 import pumaWeb from '../img/pumaWeb.png'
 import RockstarGtaV from '../img/RockstarGtaV.png' 
 import IWatchSe from '../img/IWatchSe.png'
+import quizApp from '../img/quizApp.png'
 function Projects() {
     return (
         <div className='projects-container'>
@@ -54,6 +55,29 @@ function Projects() {
                 </div>
                 <div className="projectPreview-container">
                     <img className='project-thumbnail' src={RockstarGtaV} alt="projectThumbnail" />
+
+                    <div className="project-info">
+                        <span className='project-info__projectName'>Landing Gta V</span>
+                        <div className='project-info__tech'>
+                            <span>React</span>
+                            <span>Javascript</span>
+                            <span>SCSS</span>
+                            <span>SwiperJs</span>
+                        </div>
+
+                        <div className="project-description">
+                        Landing Page. Clon de la pagina de Gta V, use React context para agregar una segunda pagina de Gta Online, en la que tuve que utilizar librerias de animaciones para asimilar las usadas en la pagina real.
+                        Esta es una de las paginas mas recientes, si bien no tuve grandes complicaciones, lo mas dificil fue encontrar una libreria acorde a lo que la pagina oficial utiliza.
+                        </div>
+
+                        <div className="project-view">
+                            <a href='https://gtav-web.vercel.app/' target="_blank">Ver Demo</a>
+                            <a href='https://github.com/Facu002/iwatch-landing' target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+                <div className="projectPreview-container">
+                    <img className='project-thumbnail' src={quizApp} alt="projectThumbnail" />
 
                     <div className="project-info">
                         <span className='project-info__projectName'>Landing Gta V</span>
